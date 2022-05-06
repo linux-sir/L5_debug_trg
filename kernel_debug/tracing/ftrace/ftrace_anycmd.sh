@@ -68,6 +68,7 @@ reset_ftrc()
 
 init_ftrc()
 {
+    export LANG=en
  cat /dev/null > ${TRCMNT}/trace
  runcmd_failchk 1 "echo function_graph > ${TRCMNT}/current_tracer"
  echo 1 > ${TRCMNT}/options/latency-format
